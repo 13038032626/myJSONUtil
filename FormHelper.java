@@ -107,5 +107,12 @@ public class FormHelper {
         int midIndex = originJSON.indexOf(":");
         return startIndex != -1 && midIndex != -1 && midIndex > startIndex;
     }
+
+    public static void main(String[] args) {
+        LinkedHashMap<String, Object> data = FormHelper.getDataFromDB("test",
+                "json",
+                "\"name\":\"杨得志\",\"age\":12,\"address\":{\"name\":\"123\",\"num\":{\"big\":1,\"small\":100}},\"status\":\"student\"");
+        System.out.println(data);
+    }
 }
 
